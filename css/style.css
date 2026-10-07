@@ -1,366 +1,487 @@
 /* ==========================================================================
-   VARIABLES Y ESTILOS GENERALES
-   ========================================================================== */
-:root {
-  /* Colores Corporativos solicitados */
-  --color-principal: #121212;
-  --color-secundario: #1E1E1E;
-  --color-complementario: #FF6600;
-  --color-fondo: #121212;
-  --color-texto: #E0E0E0;
-  --color-texto-suave: #A0A0A0;
-  --color-blanco: #FFFFFF;
-
-  /* Tipografías solicitadas */
-  --fuente-titulos: 'Cormorant Garamond', serif;
-  --fuente-textos: 'Montserrat', sans-serif;
+RESET Y CONFIGURACIÓN GENERAL
+========================================================================== */
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
-
-/* Reinicio básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 html {
-  scroll-behavior: smooth;
+scroll-behavior: smooth;
 }
-
 body {
-  background-color: var(--color-fondo);
-  color: var(--color-texto);
-  font-family: var(--fuente-textos);
-  line-height: 1.6;
+background-color: #121212;
+color: #FFFFFF;
+font-family: 'Montserrat', sans-serif;
+line-height: 1.6;
 }
-
-/* Configuración de imágenes */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Títulos y Subtítulos */
 h1, h2, h3, h4 {
-  font-family: var(--fuente-titulos);
-  color: var(--color-blanco);
-  font-weight: 700;
+font-family: 'Cormorant Garamond', serif;
+font-weight: 700;
+color: #FFFFFF;
 }
-
-h2 {
-  font-size: 2.8rem;
-  text-align: center;
-  margin-bottom: 10px;
+a {
+text-decoration: none;
+color: inherit;
 }
-
-.subtitulo-seccion {
-  text-align: center;
-  color: var(--color-texto-suave);
-  margin-bottom: 40px;
-  font-size: 1.1rem;
+ul {
+list-style: none;
 }
-
-/* Botones Generales */
-.boton-principal, 
-.boton-tarjeta, 
-.boton-enviar {
-  display: inline-block;
-  background-color: var(--color-complementario);
-  color: var(--color-blanco);
-  padding: 12px 28px;
-  text-decoration: none;
-  font-weight: 600;
-  border-radius: 4px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+img {
+max-width: 100%;
+height: auto;
+display: block;
 }
-
-.boton-principal:hover, 
-.boton-tarjeta:hover, 
-.boton-enviar:hover {
-  background-color: #e05500;
-}
-
 /* ==========================================================================
-   1. ENCABEZADO (HEADER)
-   ========================================================================== */
+CONTENEDOR Y CLASES REUTILIZABLES
+========================================================================== */
+.contenedor {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
+}
+.titulo-seccion {
+font-size: 2.5rem;
+text-align: center;
+margin-bottom: 2.5rem;
+color: #FF6600;
+position: relative;
+}
+.titulo-seccion::after {
+content: '';
+display: block;
+width: 60px;
+height: 3px;
+background-color: #FF6600;
+margin: 10px auto 0 auto;
+}
+/* ==========================================================================
+HEADER & NAVEGACIÓN (FLEXBOX)
+========================================================================== */
 .encabezado {
-  background-color: var(--color-secundario);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  padding: 20px 50px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-  
-  /* Flexbox para el Encabezado */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+background-color: rgba(18, 18, 18, 0.95);
+position: sticky;
+top: 0;
+z-index: 1000;
+border-bottom: 1px solid #1E1E1E;
+padding: 15px 0;
 }
-
-
-/* Menú de navegación */
+.navegacion-flex {
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+}
+.logo {
+font-family: 'Cormorant Garamond', serif;
+font-size: 1.8rem;
+font-weight: 700;
+color: #FF6600;
+letter-spacing: 2px;
+}
 .menu {
-  list-style: none;
-  
-  /* Flexbox para el Menú */
-  display: flex;
-  gap: 25px;
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
 }
-
 .menu a {
-  color: var(--color-texto);
-  text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 500;
-  transition: color 0.3s ease;
+font-size: 0.95rem;
+font-weight: 500;
+transition: color 0.3s ease;
 }
-
 .menu a:hover {
-  color: var(--color-complementario);
+color: #FF6600;
 }
-
 /* ==========================================================================
-   2. SECCIÓN PRINCIPAL (HERO)
-   ========================================================================== */
+2. HERO SECTION (FLEXBOX)
+========================================================================== */
 .hero {
-  min-height: 85vh;
-  padding: 60px 50px;
-  background-color: var(--color-principal);
-
-  /* Flexbox para 2 columnas */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
+padding: 80px 0;
+background-color: #121212;
 }
-
-.hero-columna-texto {
-  flex: 1;
+.hero-flex {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 40px;
+flex-wrap: wrap;
 }
-
-.etiqueta-negocio {
-  color: var(--color-complementario);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 0.85rem;
-  font-weight: 600;
+.hero-texto {
+flex: 1 1 500px;
 }
-
-.hero-columna-texto h1 {
-  font-size: 3.5rem;
-  line-height: 1.1;
-  margin: 15px 0;
+.hero-imagen {
+flex: 1 1 400px;
 }
-
+.hero-imagen img {
+border-radius: 8px;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+border: 1px solid #1E1E1E;
+}
+.subtitulo {
+color: #FF6600;
+font-size: 0.9rem;
+text-transform: uppercase;
+letter-spacing: 2px;
+font-weight: 600;
+}
+.hero h1 {
+font-size: 3.2rem;
+margin: 10px 0;
+line-height: 1.1;
+}
 .eslogan {
-  font-family: var(--fuente-titulos);
-  font-size: 1.5rem;
-  font-style: italic;
-  color: var(--color-complementario);
-  margin-bottom: 20px;
+font-style: italic;
+color: #CCCCCC;
+font-size: 1.2rem;
+margin-bottom: 15px;
 }
-
 .descripcion-hero {
-  margin-bottom: 30px;
-  color: var(--color-texto-suave);
-  max-width: 550px;
+font-size: 1rem;
+color: #BBBBBB;
+margin-bottom: 30px;
 }
-
-.hero-columna-imagen {
-  flex: 1;
+.boton {
+display: inline-block;
+background-color: #FF6600;
+color: #FFFFFF;
+padding: 12px 30px;
+border-radius: 4px;
+font-weight: 600;
+transition: background-color 0.3s ease, transform 0.2s ease;
 }
-
-.hero-columna-imagen img {
-  border-radius: 8px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.7);
-  width: 100%;
+.boton:hover {
+background-color: #E05500;
+transform: translateY(-2px);
 }
-
 /* ==========================================================================
-   3. SECCIÓN NOSOTROS
-   ========================================================================== */
+3. SOBRE NOSOTROS (FLEXBOX)
+========================================================================== */
 .nosotros {
-  padding: 80px 50px;
-  background-color: var(--color-secundario);
-
-  /* Flexbox */
-  display: flex;
-  align-items: center;
-  gap: 50px;
+padding: 80px 0;
+background-color: #1E1E1E;
 }
-
+.nosotros-flex {
+display: flex;
+align-items: center;
+gap: 50px;
+flex-wrap: wrap;
+}
 .nosotros-imagen {
-  flex: 1;
+flex: 1 1 400px;
 }
-
 .nosotros-imagen img {
-  border-radius: 8px;
-  border-left: 5px solid var(--color-complementario);
+border-radius: 8px;
+box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
-
-.nosotros-contenido {
-  flex: 1;
+.nosotros-texto {
+flex: 1 1 500px;
 }
-
-.nosotros-contenido h2 {
-  text-align: left;
+.nosotros-texto h2 {
+font-size: 2.5rem;
+margin-bottom: 20px;
+color: #FF6600;
 }
-
-.nosotros-contenido .destacado {
-  font-size: 1.1rem;
-  color: var(--color-blanco);
-  margin: 20px 0;
+.nosotros-texto p {
+color: #DDDDDD;
+margin-bottom: 15px;
+font-size: 1.05rem;
 }
-
-.nosotros-contenido p {
-  color: var(--color-texto-suave);
-  margin-bottom: 20px;
-}
-
-.lista-diferenciadores {
-  list-style: none;
-}
-
-.lista-diferenciadores li {
-  margin-bottom: 10px;
-  color: var(--color-texto);
-  font-weight: 500;
-}
-
 /* ==========================================================================
-   4. PRODUCTOS O SERVICIOS
-   ========================================================================== */
+4. SERVICIOS / TARJETAS (FLEXBOX LAYOUT)
+========================================================================== */
 .servicios {
-  padding: 80px 50px;
-  background-color: var(--color-principal);
+padding: 80px 0;
+background-color: #121212;
 }
-
-.servicios-contenedor {
-  /* Flexbox con Wrap y Gap */
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+.servicios-flex {
+display: flex;
+flex-wrap: wrap;
+gap: 30px;
+justify-content: center;
 }
-
-.tarjeta-servicio {
-  background-color: var(--color-secundario);
-  border-radius: 8px;
-  overflow: hidden;
-  width: calc(33.333% - 20px);
-  min-width: 280px;
-  
-  /* Flexbox interno para alinear contenido */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
+.tarjeta {
+background-color: #1E1E1E;
+border-radius: 8px;
+overflow: hidden;
+flex: 1 1 calc(33.333% - 30px);
+min-width: 280px;
+max-width: 380px;
+display: flex;
+flex-direction: column;
+border: 1px solid #2A2A2A;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-.tarjeta-servicio:hover {
-  transform: translateY(-8px);
+.tarjeta:hover {
+transform: translateY(-8px);
+box-shadow: 0 12px 25px rgba(255, 102, 0, 0.15);
 }
-
-.tarjeta-servicio img {
-  height: 220px;
-  width: 100%;
-  object-fit: cover;
+.tarjeta img {
+width: 100%;
+height: 220px;
+object-fit: cover;
 }
-
-.tarjeta-cuerpo {
-  padding: 25px;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  justify-content: space-between;
+.tarjeta-contenido {
+padding: 25px;
+display: flex;
+flex-direction: column;
+flex-grow: 1;
 }
-
-.tarjeta-cuerpo h3 {
-  font-size: 1.6rem;
-  margin-bottom: 10px;
+.tarjeta-contenido h3 {
+font-size: 1.5rem;
+margin-bottom: 12px;
 }
-
-.tarjeta-cuerpo p {
-  color: var(--color-texto-suave);
-  font-size: 0.95rem;
-  margin-bottom: 15px;
+.tarjeta-contenido p {
+font-size: 0.95rem;
+color: #AAAAAA;
+margin-bottom: 20px;
+flex-grow: 1;
 }
-
 .precio {
-  font-weight: 700;
-  color: var(--color-complementario) !important;
-  font-size: 1.1rem !important;
+display: block;
+font-weight: 700;
+color: #FF6600;
+font-size: 1.1rem;
+margin-bottom: 15px;
 }
-
+.boton-tarjeta {
+display: block;
+text-align: center;
+border: 1px solid #FF6600;
+color: #FF6600;
+padding: 10px;
+border-radius: 4px;
+font-weight: 600;
+transition: all 0.3s ease;
+}
+.boton-tarjeta:hover {
+background-color: #FF6600;
+color: #FFFFFF;
+}
 /* ==========================================================================
-   5. BENEFICIOS O SERVICIOS
-   ========================================================================== */
+5. BENEFICIOS (FLEXBOX)
+========================================================================== */
 .beneficios {
-  padding: 80px 50px;
-  background-color: var(--color-secundario);
+padding: 80px 0;
+background-color: #1E1E1E;
 }
-/* ==========================================================================
-   5. BENEFICIOS Y DIFERENCIADORES
-   ========================================================================== */
-.beneficios {
-  padding: 80px 50px;
-  background-color: var(--color-secundario);
+.beneficios-flex {
+display: flex;
+gap: 30px;
+flex-wrap: wrap;
+justify-content: center;
 }
-
-.beneficios-contenedor {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 .beneficio-caja {
-  background-color: var(--color-principal);
-  padding: 35px 25px;
-  border-radius: 8px;
-  flex: 1 1 280px;
-  max-width: 360px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-  border-bottom: 3px solid transparent;
-  transition: transform 0.3s ease, border-color 0.3s ease;
+background-color: #121212;
+padding: 30px;
+border-radius: 8px;
+flex: 1 1 300px;
+text-align: center;
+border-top: 4px solid #FF6600;
 }
-
-.beneficio-caja:hover {
-  transform: translateY(-5px);
-  border-bottom-color: var(--color-complementario);
-}
-
-.beneficio-icono {
-  font-size: 2.5rem;
-  color: var(--color-complementario);
-  margin-bottom: 15px;
-}
-
 .beneficio-caja h3 {
-  font-size: 1.4rem;
-  margin-bottom: 12px;
+font-size: 1.5rem;
+margin-bottom: 15px;
 }
-
 .beneficio-caja p {
-  color: var(--color-texto-suave);
-  font-size: 0.95rem;
+color: #AAAAAA;
+font-size: 0.95rem;
+}
+/* ==========================================================================
+6. TABLA DE PLANES
+========================================================================== */
+.planes {
+padding: 80px 0;
+background-color: #121212;
+}
+.tabla-contenedor {
+width: 100%;
+overflow-x: auto;
+}
+table {
+width: 100%;
+border-collapse: collapse;
+background-color: #1E1E1E;
+border-radius: 8px;
+overflow: hidden;
+}
+th, td {
+padding: 15px 20px;
+text-align: left;
+}
+thead {
+background-color: #FF6600;
+color: #FFFFFF;
+}
+thead th {
+font-family: 'Cormorant Garamond', serif;
+font-size: 1.2rem;
+letter-spacing: 1px;
+}
+tbody tr {
+border-bottom: 1px solid #2A2A2A;
+}
+tbody tr:nth-child(even) {
+background-color: #181818;
+}
+tbody tr:hover {
+background-color: #252525;
+}
+/* ==========================================================================
+7. GALERÍA (FLEXBOX)
+========================================================================== */
+.galeria {
+padding: 80px 0;
+background-color: #1E1E1E;
+}
+.galeria-flex {
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+justify-content: center;
+}
+.galeria-item {
+flex: 1 1 calc(33.333% - 20px);
+min-width: 280px;
+max-width: 380px;
+overflow: hidden;
+border-radius: 8px;
+}
+.galeria-item img {
+width: 100%;
+height: 250px;
+object-fit: cover;
+transition: transform 0.4s ease;
+}
+.galeria-item:hover img {
+transform: scale(1.08);
+}
+/* ==========================================================================
+8. FORMULARIO DE CONTACTO
+========================================================================== */
+.contacto {
+padding: 80px 0;
+background-color: #121212;
+}
+.formulario {
+max-width: 700px;
+margin: 0 auto;
+background-color: #1E1E1E;
+padding: 40px;
+border-radius: 8px;
+border: 1px solid #2A2A2A;
+}
+.campo {
+margin-bottom: 20px;
+display: flex;
+flex-direction: column;
+}
+.campo label {
+margin-bottom: 8px;
+font-weight: 500;
+color: #DDDDDD;
+}
+.campo input,
+.campo select,
+.campo textarea {
+width: 100%;
+padding: 12px 15px;
+background-color: #121212;
+border: 1px solid #333333;
+border-radius: 4px;
+color: #FFFFFF;
+font-family: 'Montserrat', sans-serif;
+font-size: 0.95rem;
+transition: border-color 0.3s ease;
+}
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+outline: none;
+border-color: #FF6600;
+}
+.boton-enviar {
+width: 100%;
+background-color: #FF6600;
+color: #FFFFFF;
+padding: 14px;
+border: none;
+border-radius: 4px;
+font-size: 1rem;
+font-weight: 600;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+.boton-enviar:hover {
+background-color: #E05500;
+}
+/* ==========================================================================
+9. FOOTER (FLEXBOX)
+========================================================================== */
+.pie-pagina {
+background-color: #0A0A0A;
+padding: 50px 0 20px 0;
+border-top: 1px solid #1E1E1E;
+}
+.footer-flex {
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+gap: 40px;
+margin-bottom: 30px;
+}
+.footer-columna {
+flex: 1 1 300px;
+}
+.footer-columna h3 {
+font-size: 1.8rem;
+color: #FF6600;
+margin-bottom: 10px;
+}
+.footer-columna h4 {
+font-size: 1.3rem;
+margin-bottom: 15px;
+}
+.footer-columna p {
+color: #AAAAAA;
+margin-bottom: 8px;
+font-size: 0.95rem;
+}
+.copyright {
+text-align: center;
+padding-top: 20px;
+border-top: 1px solid #1E1E1E;
+color: #666666;
+font-size: 0.85rem;
+}
+/* ==========================================================================
+DISEÑO RESPONSIVO (MEDIA QUERIES)
+========================================================================== */
+@media (max-width: 768px) {
+.navegacion-flex {
+flex-direction: column;
+gap: 15px;
+}
+.menu {
+    justify-content: center;
 }
 
-/* ==========================================================================
-   6. PIE DE PÁGINA (FOOTER)
-   ========================================================================== */
-.pie-pagina {
-  background-color: #0A0A0A;
-  color: var(--color-texto-suave);
-  padding-top: 60px;
-  border-top: 1px solid #222;
+.hero h1 {
+    font-size: 2.3rem;
 }
+
+.titulo-seccion {
+    font-size: 2rem;
+}
+
+.formulario {
+    padding: 25px;
+}
+
+
+
+}
+
+
+
 
 

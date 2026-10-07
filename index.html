@@ -1,196 +1,306 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Estudio fotográfico Juangui Wacky | Fotografía de Alto Impacto</title>
-
-  <!-- Fuentes de Google Fonts: Cormorant Garamond y Montserrat -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Enlace a la hoja de estilos externa -->
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-
-  <!-- ==================== ENCABEZADO (HEADER) ==================== -->
-  <header class="encabezado">
-    <div class="logo">
-     
-  <a href="#inicio"></a><img src="img/logo.png" alt="Logo de la Empresa" class="logo-img"></a>
+<!-- 1. HEADER (ENCABEZADO Y NAVEGACIÓN) -->
+<header class="encabezado">
+    <div class="contenedor navegacion-flex">
+        <a href="#" class="logo">JUANGUI WACKY</a>
+        <nav>
+            <ul class="menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="#planes">Planes</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
     </div>
+</header>
 
-    <nav class="navegacion">
-      <ul class="menu">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#beneficios">Beneficios</a></li>
-        <li><a href="#paquetes">Paquetes</a></li>
-        <li><a href="#galeria">Galería</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- ==================== CONTENIDO PRINCIPAL ==================== -->
-  <main>
-    <!-- ==================== SECCIÓN PRINCIPAL (HERO) ==================== -->
-    <section class="hero" id="inicio">
-      <div class="hero-columna-texto">
-        <span class="etiqueta-negocio">Fotografía Profesional en Medellín</span>
-        <h1>Estudio fotográfico Juangui Wacky</h1>
-        <p class="eslogan">"El arte de hacer eternos tus mejores recuerdos."</p>
-        <p class="descripcion-hero">
-          Estética visual de alto impacto para marcas, eventos y marcas personales. Transformamos momentos inolvidables y estrategias en imágenes que destacan.
-        </p>
-        <a href="#contacto" class="boton-principal">Reserva tu Sesión</a>
-      </div>
-      <div class="hero-columna-imagen">
-        <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?auto=format&fit=crop&w=800&q=80" alt="Cámara fotográfica profesional en el estudio de Juangui Wacky">
-      </div>
-    </section>
-
-    <!-- ==================== SECCIÓN NOSOTROS ==================== -->
-    <section class="nosotros" id="nosotros">
-      <div class="nosotros-imagen">
-        <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=800&q=80" alt="Fotógrafo trabajando en sesión de fotos en Medellín">
-      </div>
-      <div class="nosotros-contenido">
-        <h2>Sobre Nosotros</h2>
-        <p class="destacado">
-          En Estudio fotográfico Juangui Wacky, nos especializamos en la producción fotográfica de alto nivel para marcas personales, influencers, empresas, quinceañeras y parejas próximas a casarse.
-        </p>
-        <p>
-          Documentamos los capítulos más importantes de la vida: bodas sofisticadas y fiestas de quince años con una mirada editorial, auténtica y atemporal. Creación de luz, encuadre y concepto perfecto a la medida de tus necesidades.
-        </p>
-        <ul class="lista-diferenciadores">
-          <li>✔ Dirección editorial y de posado personalizado.</li>
-          <li>✔ Equipos de iluminación de gama alta.</li>
-          <li>✔ Entrega en galería digital HD y retoque profesional.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ==================== SECCIÓN SERVICIOS / PRODUCTOS ==================== -->
-    <section class="servicios" id="servicios">
-      <h2>Nuestros Servicios</h2>
-      <p class="subtitulo-seccion">Procesos fotográficos diseñados para proyectar tu mejor versión.</p>
-      
-      <div class="servicios-contenedor">
-        
-        <!-- Tarjeta 1 -->
-        <article class="tarjeta-servicio">
-          <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=600&q=80" alt="Fotografía publicitaria de productos">
-          <div class="tarjeta-cuerpo">
-            <h3>Fotografía Publicitaria &amp; De Producto</h3>
-            <p>Imágenes comerciales que destacan las virtudes de tu producto y elevan las ventas de tu marca.</p>
-            <p class="precio">Desde $350.000 COP</p>
-            <a href="#contacto" class="boton-tarjeta">Solicitar Cotización</a>
-          </div>
-        </article>
-
-        <!-- Tarjeta 2 -->
-        <article class="tarjeta-servicio">
-          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Sesión de branding personal para influencers">
-          <div class="tarjeta-cuerpo">
-            <h3>Branding Personal &amp; Influencers</h3>
-            <p>Contenido visual de impacto para figuras públicas e influencers que buscan mantener redes activas.</p>
-            <p class="precio">Desde $280.000 COP</p>
-            <a href="#contacto" class="boton-tarjeta">Solicitar Cotización</a>
-          </div>
-        </article>
-
-        <!-- Tarjeta 3 -->
-        <article class="tarjeta-servicio">
-          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80" alt="Cobertura documental de bodas">
-          <div class="tarjeta-cuerpo">
-            <h3>Cobertura Documental de Bodas</h3>
-            <p>Registramos tu boda con estilo editorial, natural y atemporal. Un recuerdo imborrable.</p>
-            <p class="precio">Desde $1.200.000 COP</p>
-            <a href="#contacto" class="boton-tarjeta">Solicitar Cotización</a>
-          </div>
-        </article>
-
-        <!-- Tarjeta 4 -->
-        <article class="tarjeta-servicio">
-          <img src="https://images.unsplash.com/photo-1566737236500-c8ac43014a67?auto=format&fit=crop&w=600&q=80" alt="Sesión fotográfica para quinceañeras">
-          <div class="tarjeta-cuerpo">
-            <h3>Sesiones de Quinceañeras</h3>
-            <p>Sesiones Pre-XVs y cobertura integral de fiesta con un estilo fresco, juvenil y sofisticado.</p>
-            <p class="precio">Desde $600.000 COP</p>
-            <a href="#contacto" class="boton-tarjeta">Solicitar Cotización</a>
-          </div>
-        </article>
-
-        <!-- Tarjeta 5 -->
-        <article class="tarjeta-servicio">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Retrato corporativo para equipos de trabajo">
-          <div class="tarjeta-cuerpo">
-            <h3>Retrato Corporativo &amp; Equipo</h3>
-            <p>Proyecta credibilidad y profesionalismo con retratos impecables para directivos y personal.</p>
-            <p class="precio">Desde $300.000 COP</p>
-            <a href="#contacto" class="boton-tarjeta">Solicitar Cotización</a>
-          </div>
-        </article>
-
-        <!-- Tarjeta 6 -->
-        <article class="tarjeta-servicio">
-          <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=600&q=80" alt="Sesión de fotos de moda y lookbooks">
-          <div class="tarjeta-cuerpo">
-            <h3>Sesiones de Moda &amp; Lookbooks</h3>
-            <p>Producción visual completa para diseñadores, tiendas de ropa y marcas de indumentaria.</p>
-            <p class="precio">Desde $500.000 COP</p>
-            <a href="#contacto" class="boton-tarjeta">Solicitar Cotización</a>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- ==================== SECCIÓN BENEFICIOS ==================== -->
-    <section class="beneficios" id="beneficios">
-      <h2>¿Por qué elegir Juangui Wacky?</h2>
-      <p class="subtitulo-seccion">Razones que marcan la diferencia en nuestros servicios</p>
-      
-      <div class="beneficios-contenedor">
-        
-        <div class="beneficio-caja">
-          <div class="beneficio-icono">⚡</div>
-          <h3>Atención Rápida</h3>
-          <p>Respuesta inmediata a tus consultas para brindarte la mejor atención sin demoras.</p>
+<!-- 2. HERO (SECCIÓN PRINCIPAL) -->
+<section id="inicio" class="hero">
+    <div class="contenedor hero-flex">
+        <div class="hero-texto">
+            <span class="subtitulo">Estudio Fotográfico Profesional</span>
+            <h1>Estudio Fotográfico Juangui Wacky</h1>
+            <p class="eslogan">"El arte de hacer eternos tus mejores recuerdos."</p>
+            <p class="descripcion-hero">
+                Estética visual de alto impacto en Medellín para influencers, figuras públicas, empresas, bodas sofisticadas y quinceañeras. Creamos la luz y el concepto perfecto para ti.
+            </p>
+            <a href="#contacto" class="boton">Reservar Sesión</a>
         </div>
-
-        <div class="beneficio-caja">
-          <div class="beneficio-icono">🛡️</div>
-          <h3>Garantía y Calidad</h3>
-          <p>Trabajamos bajo altos estándares para garantizar que cada resultado sea impecable.</p>
+        <div class="hero-imagen">
+            <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?auto=format&fit=crop&w=800&q=80" alt="Cámara fotográfica profesional en estudio">
         </div>
-
-        <div class="beneficio-caja">
-          <div class="beneficio-icono">💎</div>
-          <h3>Diseño Exclusivo</h3>
-          <p>Soluciones personalizadas pensadas a la medida de las necesidades de tu marca.</p>
-        </div>
-
-      </div>
-    </section>
-  </main>
-
-  <!-- ==================== PIE DE PÁGINA (FOOTER) ==================== -->
-  <footer class="pie-pagina">
-    <div class="footer-contenedor">
-      
-      <!-- Columna 1: Info Marca -->
-      <div class="footer-columna">
-        <h4>Juangui Wacky</h4>
-        <p>Innovación, creatividad y resultados profesionales para hacer destacar tu negocio en todo momento.</p>
-        <p>&copy; 2026 Juangui Wacky. Todos los derechos reservados.</p>
-      </div>
     </div>
-  </footer>
+</section>
 
-</body>
-</html>
+<!-- 3. SECCIÓN NOSOTROS -->
+<section id="nosotros" class="nosotros">
+    <div class="contenedor nosotros-flex">
+        <div class="nosotros-imagen">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Fotógrafo trabajando en sesión de retrato">
+        </div>
+        <div class="nosotros-texto">
+            <h2>Sobre Nosotros</h2>
+            <p>
+                En <strong>Juangui Wacky</strong>, transformamos momentos inolvidables y estrategias de marca en imágenes que destacan. Nos especializamos en la producción fotográfica de alto nivel para marcas personales, influencers y empresas que buscan proyectar una imagen profesional y memorable.
+            </p>
+            <p>
+                Al mismo tiempo, documentamos los capítulos más importantes de la vida: bodas sofisticadas y fiestas de quince años con una mirada editorial, auténtica y atemporal.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- 4. PRODUCTOS O SERVICIOS (6 TARJETAS) -->
+<section id="servicios" class="servicios">
+    <div class="contenedor">
+        <h2 class="titulo-seccion">Nuestros Servicios</h2>
+        <div class="servicios-flex">
+            
+            <!-- Tarjeta 1 -->
+            <div class="tarjeta">
+                <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=600&q=80" alt="Fotografía Publicitaria y de Producto">
+                <div class="tarjeta-contenido">
+                    <h3>Fotografía Publicitaria & De Producto</h3>
+                    <p>Imágenes comerciales diseñadas para hacer destacar tus productos en campañas y e-commerce.</p>
+                    <span class="precio">Desde $450.000 COP</span>
+                    <a href="#contacto" class="boton-tarjeta">Solicitar Cotización</a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="tarjeta">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Branding Personal e Influencers">
+                <div class="tarjeta-contenido">
+                    <h3>Branding Personal & Contenido para Influencers</h3>
+                    <p>Sesiones editoriales para creadores de contenido y figuras públicas que buscan impacto visual.</p>
+                    <span class="precio">Desde $380.000 COP</span>
+                    <a href="#contacto" class="boton-tarjeta">Solicitar Cotización</a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="tarjeta">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80" alt="Cobertura de Bodas">
+                <div class="tarjeta-contenido">
+                    <h3>Cobertura Documental & Editorial de Bodas</h3>
+                    <p>Documentación poética y estética del día más importante de tu vida. Mirada atemporal.</p>
+                    <span class="precio">Desde $1.200.000 COP</span>
+                    <a href="#contacto" class="boton-tarjeta">Solicitar Cotización</a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 4 -->
+            <div class="tarjeta">
+                <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=600&q=80" alt="Sesiones de Quinceañeras">
+                <div class="tarjeta-contenido">
+                    <h3>Sesiones de Quinceañeras (Pre-XVs & Evento)</h3>
+                    <p>Pre-XVs creativos y cobertura completa del evento con producción fotográfica de vanguardia.</p>
+                    <span class="precio">Desde $650.000 COP</span>
+                    <a href="#contacto" class="boton-tarjeta">Solicitar Cotización</a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 5 -->
+            <div class="tarjeta">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80" alt="Retrato Corporativo">
+                <div class="tarjeta-contenido">
+                    <h3>Retrato Corporativo & Equipo de Trabajo</h3>
+                    <p>Fotografía ejecutiva para empresas que desean proyectar profesionalismo y confianza.</p>
+                    <span class="precio">Desde $500.000 COP</span>
+                    <a href="#contacto" class="boton-tarjeta">Solicitar Cotización</a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 6 -->
+            <div class="tarjeta">
+                <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=600&q=80" alt="Sesiones de Moda">
+                <div class="tarjeta-contenido">
+                    <h3>Sesiones de Moda & Lookbooks</h3>
+                    <p>Producción de moda para diseñadores, catálogos y marcas de ropa con dirección artística.</p>
+                    <span class="precio">Desde $800.000 COP</span>
+                    <a href="#contacto" class="boton-tarjeta">Solicitar Cotización</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- 5. BENEFICIOS / DIFERENCIALES -->
+<section id="beneficios" class="beneficios">
+    <div class="contenedor">
+        <h2 class="titulo-seccion">¿Por Qué Elegirnos?</h2>
+        <div class="beneficios-flex">
+            <div class="beneficio-caja">
+                <h3>Tecnología de Vanguardia</h3>
+                <p>Contamos con equipos fotográficos de formato completo e iluminación de estudio de última generación.</p>
+            </div>
+            <div class="beneficio-caja">
+                <h3>Dirección de Pose Personalizada</h3>
+                <p>Te guiamos en cada movimiento durante la sesión para obtener expresiones naturales y favorecedoras.</p>
+            </div>
+            <div class="beneficio-caja">
+                <h3>Edición Editorial</h3>
+                <p>Revelado digital minucioso y retoque profesional manteniendo la esencia y elegancia natural.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 6. TABLA DE PAQUETES -->
+<section id="planes" class="planes">
+    <div class="contenedor">
+        <h2 class="titulo-seccion">Planes y Paquetes</h2>
+        <div class="tabla-contenedor">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Paquete</th>
+                        <th>Entregables</th>
+                        <th>Tiempo de Sesión</th>
+                        <th>Inversión</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Express Personal</td>
+                        <td>10 fotos editadas en alta resolución</td>
+                        <td>1 Hora</td>
+                        <td>$350.000 COP</td>
+                    </tr>
+                    <tr>
+                        <td>Branding / Influencer</td>
+                        <td>25 fotos editadas + 2 Reels/Videos</td>
+                        <td>2.5 Horas</td>
+                        <td>$600.000 COP</td>
+                    </tr>
+                    <tr>
+                        <td>Editorial Quinceañeras</td>
+                        <td>40 fotos + Álbum impreso lujoso</td>
+                        <td>4 Horas</td>
+                        <td>$950.000 COP</td>
+                    </tr>
+                    <tr>
+                        <td>Boda Imperial</td>
+                        <td>Cobertura total + Galería web + Video resumido</td>
+                        <td>Todo el Evento</td>
+                        <td>$1.800.000 COP</td>
+                    </tr>
+                    <tr>
+                        <td>Comercial / Empresa</td>
+                        <td>Catálogo completo de productos o equipo</td>
+                        <td>A convenir</td>
+                        <td>Cotización personalizada</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- 7. GALERÍA -->
+<section id="galeria" class="galeria">
+    <div class="contenedor">
+        <h2 class="titulo-seccion">Nuestra Galería</h2>
+        <div class="galeria-flex">
+            <div class="galeria-item">
+                <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=600&q=80" alt="Fotografía de boda en exteriores">
+            </div>
+            <div class="galeria-item">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Retrato de moda en estudio">
+            </div>
+            <div class="galeria-item">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Fotografía de producto publicitaria">
+            </div>
+            <div class="galeria-item">
+                <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=600&q=80" alt="Sesión de fotos para quinceañera">
+            </div>
+            <div class="galeria-item">
+                <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=600&q=80" alt="Sesión de branding personal para influencer">
+            </div>
+            <div class="galeria-item">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80" alt="Retrato corporativo directivo">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 8. FORMULARIO DE CONTACTO -->
+<section id="contacto" class="contacto">
+    <div class="contenedor">
+        <h2 class="titulo-seccion">Contáctanos</h2>
+        <form class="formulario">
+            <div class="campo">
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre y apellido" required>
+            </div>
+
+            <div class="campo">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+            </div>
+
+            <div class="campo">
+                <label for="telefono">Teléfono / WhatsApp:</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="305 351 92 34" required>
+            </div>
+
+            <div class="campo">
+                <label for="ciudad">Ciudad:</label>
+                <input type="text" id="ciudad" name="ciudad" value="Medellín" required>
+            </div>
+
+            <div class="campo">
+                <label for="servicio">Servicio de Interés:</label>
+                <select id="servicio" name="servicio" required>
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="publicidad">Fotografía Publicitaria & De Producto</option>
+                    <option value="branding">Branding Personal & Contenido para Influencers</option>
+                    <option value="bodas">Cobertura Documental & Editorial de Bodas</option>
+                    <option value="quinceañeras">Sesiones de Quinceañeras (Pre-XVs & Evento)</option>
+                    <option value="corporativo">Retrato Corporativo & Equipo de Trabajo</option>
+                    <option value="moda">Sesiones de Moda & Lookbooks</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="mensaje">Mensaje o Detalles del Evento:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos más sobre la fecha, lugar o idea de tu sesión..." required></textarea>
+            </div>
+
+            <button type="submit" class="boton-enviar">Enviar Mensaje</button>
+        </form>
+    </div>
+</section>
+
+<!-- 9. FOOTER (PIE DE PÁGINA) -->
+<footer class="pie-pagina">
+    <div class="contenedor footer-flex">
+        <div class="footer-columna">
+            <h3>Estudio Fotográfico Juangui Wacky</h3>
+            <p>"El arte de hacer eternos tus mejores recuerdos."</p>
+        </div>
+        <div class="footer-columna">
+            <h4>Contacto Directo</h4>
+            <p>📍 Ciudad: Medellín</p>
+            <p>📞 Teléfono: 305 351 92 34</p>
+            <p>✉️ Email: juanguiwacky@gmail.com</p>
+            <p>📷 Instagram: @_juanph</p>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>© 2026 Estudio Fotográfico Juangui Wacky — Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+
