@@ -1,0 +1,366 @@
+/* ==========================================================================
+   VARIABLES Y ESTILOS GENERALES
+   ========================================================================== */
+:root {
+  /* Colores Corporativos solicitados */
+  --color-principal: #121212;
+  --color-secundario: #1E1E1E;
+  --color-complementario: #FF6600;
+  --color-fondo: #121212;
+  --color-texto: #E0E0E0;
+  --color-texto-suave: #A0A0A0;
+  --color-blanco: #FFFFFF;
+
+  /* Tipografías solicitadas */
+  --fuente-titulos: 'Cormorant Garamond', serif;
+  --fuente-textos: 'Montserrat', sans-serif;
+}
+
+/* Reinicio básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: var(--fuente-textos);
+  line-height: 1.6;
+}
+
+/* Configuración de imágenes */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Títulos y Subtítulos */
+h1, h2, h3, h4 {
+  font-family: var(--fuente-titulos);
+  color: var(--color-blanco);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.subtitulo-seccion {
+  text-align: center;
+  color: var(--color-texto-suave);
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+/* Botones Generales */
+.boton-principal, 
+.boton-tarjeta, 
+.boton-enviar {
+  display: inline-block;
+  background-color: var(--color-complementario);
+  color: var(--color-blanco);
+  padding: 12px 28px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton-principal:hover, 
+.boton-tarjeta:hover, 
+.boton-enviar:hover {
+  background-color: #e05500;
+}
+
+/* ==========================================================================
+   1. ENCABEZADO (HEADER)
+   ========================================================================== */
+.encabezado {
+  background-color: var(--color-secundario);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 20px 50px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  
+  /* Flexbox para el Encabezado */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* Menú de navegación */
+.menu {
+  list-style: none;
+  
+  /* Flexbox para el Menú */
+  display: flex;
+  gap: 25px;
+}
+
+.menu a {
+  color: var(--color-texto);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: var(--color-complementario);
+}
+
+/* ==========================================================================
+   2. SECCIÓN PRINCIPAL (HERO)
+   ========================================================================== */
+.hero {
+  min-height: 85vh;
+  padding: 60px 50px;
+  background-color: var(--color-principal);
+
+  /* Flexbox para 2 columnas */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-columna-texto {
+  flex: 1;
+}
+
+.etiqueta-negocio {
+  color: var(--color-complementario);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.hero-columna-texto h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin: 15px 0;
+}
+
+.eslogan {
+  font-family: var(--fuente-titulos);
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--color-complementario);
+  margin-bottom: 20px;
+}
+
+.descripcion-hero {
+  margin-bottom: 30px;
+  color: var(--color-texto-suave);
+  max-width: 550px;
+}
+
+.hero-columna-imagen {
+  flex: 1;
+}
+
+.hero-columna-imagen img {
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+  width: 100%;
+}
+
+/* ==========================================================================
+   3. SECCIÓN NOSOTROS
+   ========================================================================== */
+.nosotros {
+  padding: 80px 50px;
+  background-color: var(--color-secundario);
+
+  /* Flexbox */
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.nosotros-imagen {
+  flex: 1;
+}
+
+.nosotros-imagen img {
+  border-radius: 8px;
+  border-left: 5px solid var(--color-complementario);
+}
+
+.nosotros-contenido {
+  flex: 1;
+}
+
+.nosotros-contenido h2 {
+  text-align: left;
+}
+
+.nosotros-contenido .destacado {
+  font-size: 1.1rem;
+  color: var(--color-blanco);
+  margin: 20px 0;
+}
+
+.nosotros-contenido p {
+  color: var(--color-texto-suave);
+  margin-bottom: 20px;
+}
+
+.lista-diferenciadores {
+  list-style: none;
+}
+
+.lista-diferenciadores li {
+  margin-bottom: 10px;
+  color: var(--color-texto);
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   4. PRODUCTOS O SERVICIOS
+   ========================================================================== */
+.servicios {
+  padding: 80px 50px;
+  background-color: var(--color-principal);
+}
+
+.servicios-contenedor {
+  /* Flexbox con Wrap y Gap */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.tarjeta-servicio {
+  background-color: var(--color-secundario);
+  border-radius: 8px;
+  overflow: hidden;
+  width: calc(33.333% - 20px);
+  min-width: 280px;
+  
+  /* Flexbox interno para alinear contenido */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.tarjeta-servicio:hover {
+  transform: translateY(-8px);
+}
+
+.tarjeta-servicio img {
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.tarjeta-cuerpo {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.tarjeta-cuerpo h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.tarjeta-cuerpo p {
+  color: var(--color-texto-suave);
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.precio {
+  font-weight: 700;
+  color: var(--color-complementario) !important;
+  font-size: 1.1rem !important;
+}
+
+/* ==========================================================================
+   5. BENEFICIOS O SERVICIOS
+   ========================================================================== */
+.beneficios {
+  padding: 80px 50px;
+  background-color: var(--color-secundario);
+}
+/* ==========================================================================
+   5. BENEFICIOS Y DIFERENCIADORES
+   ========================================================================== */
+.beneficios {
+  padding: 80px 50px;
+  background-color: var(--color-secundario);
+}
+
+.beneficios-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.beneficio-caja {
+  background-color: var(--color-principal);
+  padding: 35px 25px;
+  border-radius: 8px;
+  flex: 1 1 280px;
+  max-width: 360px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  border-bottom: 3px solid transparent;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.beneficio-caja:hover {
+  transform: translateY(-5px);
+  border-bottom-color: var(--color-complementario);
+}
+
+.beneficio-icono {
+  font-size: 2.5rem;
+  color: var(--color-complementario);
+  margin-bottom: 15px;
+}
+
+.beneficio-caja h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+.beneficio-caja p {
+  color: var(--color-texto-suave);
+  font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   6. PIE DE PÁGINA (FOOTER)
+   ========================================================================== */
+.pie-pagina {
+  background-color: #0A0A0A;
+  color: var(--color-texto-suave);
+  padding-top: 60px;
+  border-top: 1px solid #222;
+}
+
+
